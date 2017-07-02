@@ -9,6 +9,7 @@
   "author": "Ivan Overgard",
   "license": "ISC",
   "devDependencies": {
+    "tslint": "^5.4.3",
     "typescript": "^2.4.1"
   }
 }
