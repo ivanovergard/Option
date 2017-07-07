@@ -1,5 +1,5 @@
-import { IActionable } from "src/interfaces/IActionable";
+import { IActionable } from "./IActionable";
 
 export interface IFilteredNoneActionable<T> {
-    do(): IActionable<T>;
+    do(action:()=> void): IActionable<T>;
 }

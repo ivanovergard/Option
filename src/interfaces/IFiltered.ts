@@ -1,4 +1,4 @@
-import { IFilteredActionable } from "src/interfaces/IFilteredActionable";
+import { IFilteredActionable } from "./IFilteredActionable";
 
 export interface IFiltered<T> extends IFilteredActionable<T> {
 

@@ -1,5 +1,5 @@
-import { IFiltered } from "src/interfaces/IFiltered";
-import { IFilteredNone } from "src/interfaces/IFilteredNone";
+import { IFiltered } from "./IFiltered";
+import { IFilteredNone } from "./IFilteredNone";
 
 export interface IOption<T> {
     when(action: (value:T) => boolean) : IFiltered<T>;

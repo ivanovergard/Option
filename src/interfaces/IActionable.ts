@@ -1,8 +1,9 @@
-import { IFilteredActionable } from "src/interfaces/IFilteredActionable";
-import { IFilteredNoneActionable } from "src/interfaces/IFilteredNoneActionable";
+import { IFilteredActionable } from "./IFilteredActionable";
+import { IFilteredNoneActionable } from "./IFilteredNoneActionable";
 
 export interface IActionable<T> {
-    when(action: (value:T) => boolean) : IFilteredActionable<T>;
+    when(predicate: (value:T) => boolean) : IFilteredActionable<T>;
     whenSome(): IFilteredActionable<T>;
     whenNone(): IFilteredNoneActionable<T>;
+    execute(): void;
 }
