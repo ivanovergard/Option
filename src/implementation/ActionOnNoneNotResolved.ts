@@ -18,8 +18,6 @@ export class ActionOnNoneNotResolved<T> implements IActionable<T> {
         return new NoneMatched<T>();
     }
 
-    execute(): void {
-        throw new Error("Method not implemented.");
-    }
+    execute(): void { }
 
 }

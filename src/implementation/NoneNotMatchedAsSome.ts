@@ -2,6 +2,7 @@ import { IFiltered } from "../interfaces/IFiltered";
 import { ActionOnNoneNotResolved } from "./ActionOnNoneNotResolved";
 import { IActionable } from "../interfaces/IActionable";
 import { IMapped } from "../interfaces/IMapped";
+import { MappingOnNoneNotResolved } from "./MappingOnNoneNotResolved";
 
 export class NoneNotMatchedAsSome<T> implements IFiltered<T> {
 
@@ -10,7 +11,7 @@ export class NoneNotMatchedAsSome<T> implements IFiltered<T> {
     }
 
     mapTo<TResult>(mapping: (value: T) => TResult): IMapped<T, TResult> {
-        throw new Error("Method not implemented.");
+        return new MappingOnNoneNotResolved<T, TResult>();
     }
     
 }

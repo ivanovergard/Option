@@ -2,6 +2,7 @@ import { IActionable } from "../interfaces/IActionable";
 import { IFiltered } from "../interfaces/IFiltered";
 import { IMapped } from "../interfaces/IMapped";
 import { ActionResolved } from "./ActionResolved";
+import { MappingResolved } from "./MappingResolved";
 
 export class SomeMatched<T> implements IFiltered<T> {
 
@@ -12,7 +13,7 @@ export class SomeMatched<T> implements IFiltered<T> {
     }
 
     mapTo<TResult>(mapping: (value: T) => TResult): IMapped<T, TResult> {
-        throw new Error("Method not implemented.");
+        return new MappingResolved<T, TResult>(mapping(this.value))
     }
 
 }
